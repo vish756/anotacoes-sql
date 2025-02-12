@@ -1,0 +1,59 @@
+Criar bancos de dados:
+create database cadastro;
+default character set utf8;
+default collate utf8_general_ci;
+
+Excluir banco de dados (mysql):
+drop database {nome do banco de dados}
+
+Criar banco de dados (mysql):
+create database {nome do banco de dados}
+
+Tipos de primitivos:
+Numerico: 
+	-"Inteiro" - TinyInt, SmallInt, Int, (Diferença sobre eles é a quantidade de bits que vai utilizar para armazenar esse dado)
+		   MediumInt, BigInt 
+
+	-"Real" - Decimal, Float, Double, Real
+
+	-"Logico" - Bit, Boolean
+
+data/tempo: - Date, DateTime, TimeStamp, Time, Year
+literal:
+	-"caracteres" - Char(Fixo), VarChar(Variante)
+
+	-"Texto" - TinyText, Text, MediumText, LongText
+
+	-"Binário" - TinyBlob, Blob, MediumBlob, LongBlob
+
+	-"Coleção" - Enum, Set
+
+espacial: - Geometry, Point, Polygon, MultiPolygon
+
+
+constraints:
+not null: significa que voce vai ter que preencher os dados.
+
+Default: sera o padrão
+
+Id: Identificador numerico (caso precise identificação unica)
+
+Auto_increment: Cada dado que colocar na tabela ela vai ganhar um identificação de 1 numero (em uma tabela de cadastro de pessoas, 2 pessoas não vao ter o mesmo numero)
+
+-----------------------------------------------------------------------------------
+OBSERVAÇÕES:
+Set/Enum: quando são usados set/enum colocando os valores separados por virgulas entre parenteses, esta
+dizendo quais valores vão ser aceitos.
+
+Decimal: entre parenteses separados por "," o primeiro numero é o numero de casas, ja o segundo
+é quantidade de numeros que irão ficar após a ",".
+
+Default: sera o padrão
+
+-----------------------------------------------------------------------------------------
+INCLUIR DADOS:
+insert into pessoas
+(nome, nascimento, sexo, peso, altura)
+values
+('regina', '1971-3-28', 'F', '79.8', '1.75')
+
